@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script type="text/javascript" src="js/rem.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/iscroll.js"></script>
+		<title>购物车</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			html,body{
+				width:100%;
+				height:100%;
+				overflow: hidden;
+				font-family: "微软雅黑";
+			}
+			ul li{
+				list-style: none;
+			}
+			#box{
+				width:100%;
+				height:100%;
+				position: relative;
+				display: flex;
+				flex-flow: column;
+			}
+			header{
+				width:100%;
+				height:2.5rem;
+				border-bottom: 1px solid #ff0000;
+				text-align: center;
+				line-height: 2.5rem;
+				color:#7a7a7a;
+				font-size:0.8rem;
+				position: relative;
+				z-index: 100;
+				background: #fff;
+			}
+			header .header-p{
+				width: 2.05rem;
+				height:1.2rem;
+				border: 1px solid #b1b1b1;
+				text-align: center;
+				line-height: 1.2rem;
+				color: #b1b1b1;
+				font-size: 0.65rem;
+				font-size: 400;
+				position: absolute;
+			}
+			.header-left{
+				top:0.65rem;
+				left:0.65rem;
+			}
+			.header-right{
+				top:0.65rem;
+				right:0.65rem;
+			}
+			.main{
+				width:98%;
+				height: 100%;
+				padding:0 1%;
+				flex: 1;
+				background: #e8e7e7;
+			}
+			.main .kong{
+				width: 100%;
+				height: 100%;
+				background: #e8e7e7 url(images/gwc.png) center 1.375rem no-repeat;
+				background-size: 50%;
+			}
+			.main .guang{
+				width: 70%;
+				margin: 0 15%;
+				height: 2.35rem;
+				background: #e93c71;
+				color: #fff;
+				font-size: 18px;
+				margin-top: 11.35rem;
+				border: none;
+				border-radius: 3px;
+			}
+			.sp{
+				width: 100%;
+				height: 100%;
+				position: relative;
+				z-index: 0;
+			}
+			.shop{
+				height: 300%;
+			}
+			.shopk{
+				width:100%;
+				height: 5rem;
+				background: #fff;				
+				padding: 0.5rem;
+				position: relative;
+				margin-bottom: 0.50rem;
+				box-sizing:border-box;
+				display: flex;
+			}
+			.ck{
+				width: 0.625rem;
+				height: 0.625rem;
+				margin-top: 1.0rem;
+				margin-right: 0.2rem;
+				border-radius: 50%;
+				border:2px solid #e0e0e0;
+			}
+			.shopimg{
+				width: 5.3rem;
+				height: 4.0rem;
+			}
+			.shopname{
+				font-size: 0.75rem;
+				color: #000;
+				width: 8.3rem;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+			.prise{
+				height: 0.5rem;
+				color:#c30e18;
+				font-size: 0.5rem;
+				position: absolute;
+				top:1.5rem;
+				left:7.0rem;
+			}
+			.shopnum{
+				height: 0.6rem;
+				position: absolute;
+				top:2.5rem;
+				left:7.0rem;
+			}
+			.shopnum .num{
+				margin: 0 1rem;
+				font-size: 0.5rem;
+			}
+			.zje{
+				width: 100%;
+				height: 3.0rem;
+				background: #fff;
+			}
+			
+			.zje p:nth-child(1){
+				font-size: 0.8rem;
+				line-height: 3rem;
+			}
+			.zprise{
+				font-size: 0.8rem;
+				font-weight: 900;
+				color:#ff0000;
+			}
+			
+			footer{
+				width:100%;
+				height: 2.6rem;
+				position: fixed;
+				bottom: 0.0rem;
+				display: flex;
+				background: #fff;
+			}
+			footer ul{
+				width: 100%;
+				height: 100%;
+				display: flex;
+				align-items: center;
+			}
+			footer ul li{
+				flex: 1;
+				height: 2.0rem;
+				width:3.0rem;
+				background: #144d2d;
+				text-align: center;
+				line-height: 2rem;
+				font-size: 0.65rem;
+				font-weight: 700;
+				color:#fff;
+				margin: 0.2rem;
+			}
+			#shanchu{
+				display: block;
+				font-size:0.7rem;
+				color:#ccc;
+				border:1px solid #ccc;
+				padding:2px 8px;
+				position: absolute;
+				right:0.8rem;
+				bottom:0.4rem;
+			}
+			.mask{
+				width:100%;
+				height:100%;
+				background:rgba(255,255,255,0.5);
+				position: absolute;
+				top:0;
+				left:0;
+				display: none;
+			}
+			.mask .mask-box{
+				width:70%;
+				height:30%;
+				background:#144d2d;
+				color:#fff;
+				position: absolute;
+				top:30%;
+				left:15%;
+				border-radius:10px;
+				text-align:center;
+				line-height:4.0rem;
+			}
+			.mask .mask-btn{
+				width:60%;
+				height:28%;
+				background:#e8e7e7;
+				position:absolute;
+				left:20%;
+				top:50%;
+				border-radius:5px;
+				color:#144d2d;
+				line-height:2.0rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<header>
+				<p class="header-p header-left" onclick="javascript :window.history.back(-1)">返回</p>
+				购物车
+				<p class="header-p header-right" onclick="window.location.href='index.html'">首页</p>
+			</header>
+			<div class="main">
+				<div class="kong" onclick="window.location.href='ProductList.html'">
+					<input class="guang" type="button"  value="去逛逛" />
+				</div>
+				<div class="sp">
+					<ul class="shop">
+					</ul>
+				</div>
+			</div>
+			<footer>
+				<ul>					
+					<li class="qx">全选</li>
+					<li class="qsc">清空</li>
+					<li class="xd">提交订单</li>
+				</ul>
+			</footer>
+			<div class="mask">
+				<div class="mask-box">先登录吧~<div class="mask-btn" onclick="window.location.href='login.html'">登 录</div></div>
+				
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		if(!localStorage.getItem("name")){
+			$(".mask").show();
+		}else{
+			$(".kong").hide();
+			if(localStorage.getItem("shop")){
+				var arr=eval(localStorage.getItem("shop"));				
+				var str='';
+				for(var i=0;i<arr.length;i++){
+					var val=arr[i];
+					str+='<li class="shopk">'+
+							'<input type="checkbox" class="ck" value="" />'+
+							'<img class="shopimg" src="'+val.src+'" alt="" title=""/>'+
+							'<p class="shopname">'+val.name+'</p>'+
+							'<p class="shopdanjia" style="display:none">'+val.price+'</p>'+
+							'<p class="shopid" style="display:none">'+val.id+'</p>'+
+							'<p class="prise">'+
+								'会员价：￥<span class="nprise">'+val.price*val.count+'</span>'+
+							'</p>'+
+							'<p class="shopnum" data-id="'+val.id+'">'+
+								'<span class="jian btn-anniu">-</span>'+
+								'<span class="num">'+val.count+'</span>'+
+								'<span class="jia btn-anniu">+</span>'+
+							'</p>'+
+							'<span id="shanchu">删除</span>'	+
+						'</li>'
+				}
+				str=str+'<li class="zje"><p>应付金额：<span class="zprise">￥00.00</span></p></li>';
+				$(".shop").append(str);
+				createScroll();
+			}
+			//删除
+			var crr=[];
+			$(".shop").on("touchend","#shanchu",function(){
+				var brr=eval(localStorage.getItem("shop"));
+				var sid=$(this).parent().find(".shopid").html();
+				for(var i=0;i<brr.length;i++){
+					if(brr[i].id!=sid){						
+						crr.push(brr[i]);
+					}
+				}
+				localStorage.setItem("shop",JSON.stringify(crr));
+				$(this).parent("li").remove();		
+				xuanzhong();
+			})
+			//清空
+			$(".qsc").on("touchend",function(){
+				$(this).parent().parent().prev().children(".sp").find(".shop").children().remove();
+				localStorage.removeItem("shop");
+				$(".kong").show();
+			})
+			//全选
+			$(".qx").on("touchend",function(){
+				$(".ck").prop("checked","checked");
+				xuanzhong();
+			})
+			//计算
+			var sum=0;
+			$(".ck").on("click",function(){
+				if($(this).prop("checked")){
+					sum+=parseInt($(this).parent().find(".nprise").html());
+				}else{
+					sum-=parseInt($(this).parent().find(".nprise").html());
+				}
+				$(".zprise").html("￥"+sum);
+			})
+			//加减
+			$(".shopnum").on("touchend",".btn-anniu",function(){
+				var danjia=parseInt($(this).parent().parent().find(".shopdanjia").html());
+				var ids=$(this).parent().data("id");
+				var err=eval(localStorage.getItem("shop"));
+				var index=0;
+				//var info=localStorage.getItem(ids);
+				var f=$(this).html();
+				var num=parseInt($(this).parent().children(".num").html());
+				if(num==1&&f=="-"){
+					return false;
+				}
+				f=="+"?num++:num--;
+				for(var i=0;i<err.length;i++){
+					if(err[i].id==ids){
+						index=i;
+						err[index].count=num;
+					}
+				}
+				localStorage.setItem("shop",JSON.stringify(err));
+				$(this).parent().children(".num").html(num);
+				$(this).parent().prev().find(".nprise").html(num*danjia);
+				xuanzhong();
+			});
+		}
+		function xuanzhong(){
+			var sumMoney=0;
+			for(var i=0;i<$(".ck").length;i++){
+				if($(".ck").prop("checked")!="checked"){
+					sumMoney+=parseInt($(".ck").eq(i).parent().find(".nprise").html());
+					$(".zprise").html("￥"+sumMoney);
+				}
+			}
+		}	
+		function createScroll(){
+		 	scrolla = new IScroll(".sp",{
+		 		click:true,
+		 		preventDefault: false,
+		 		tap:true
+		 	})
+		}	
+
+	</script>
+</html>

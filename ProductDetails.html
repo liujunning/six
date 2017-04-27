@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>productDetails</title>
+		<link rel="stylesheet" type="text/css" href="Font-Awesome-3.2.1/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/ProductDetails.css"/>
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.animate.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			
+			@font-face{
+				font-family: "iconfont";
+				src:url("font/iconfont.eot");
+				src:url("font/iconfont.eot") format("embedded-opentype"),
+				url("font/iconfont.woff") format("woff"),
+				url("font/iconfont.ttf") format("truetype"),
+				url("font/iconfont.svg") format("svg");				
+			}
+			.top{
+				width:100%;
+				height:2.15rem;
+				background:#144d2d;
+				overflow: hidden;
+				z-index: 5;
+				position: fixed;
+				left: 0;
+				top: 0;
+			}
+			.top a{
+				float:left;
+				line-height:2.15rem;
+				font-family: "iconfont";
+				color:#fff;
+			}
+			.top .shopname{
+				line-height:2.15rem;
+				color:#fff;
+				font-weight:300;
+				font-size:0.7rem;
+				/*padding:0 5.0rem;*/
+				float:left;
+				text-align: center;
+				width: 80%;
+			}
+			.icon-zuoshuangjiantou:before{
+				content:"\e61c";
+				font-size:0.8rem;
+				margin-left:0.5rem;
+			}
+			.icon-fangzi:before{
+				content: "\e600";
+				font-size:1.0rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<a href="gwc.html"><img class="gwc" src="images/cart_zw.png"/></a>
+			<div class="box1">
+				<div class="top">
+					<a href="ProductList.html" class="icon-zuoshuangjiantou"></a>
+					<h2 class="shopname">shopname</h2>
+					<a href="index.html" class="icon-fangzi"></a>
+				</div>
+				<div class="main">
+					<!--轮播图-->
+					<div class="swiper-container">
+					    <div class="swiper-wrapper">
+					        
+					    </div>
+					    <!--分页器 -->
+					    <div class="swiper-pagination"></div>
+	    			</div>
+	    			<!--商品详情-->
+	    			<div class="padd">
+		    			<p class="name">name</p>
+		    			<p class="mby">购满800元包邮</p>
+		    			<p class="yj">商品推广每笔佣金：￥<span class="s1"></span><span class="dl">去登录，</span><span class="fx">分享赚佣金</span></p>
+		    			<p class="jianjie">产品简介：<span class="jj"></span></p>
+		    			<p class="price">销售价：￥<span class="s2"></span><span class="s3">原价：￥<em class="oldpri"></em></span></p>
+	    				<div class="num">
+	    					数量：<span class="jian">-</span>
+	    					<span class="geshu">1</span>
+	    					<span class="jia">+</span>
+	    					<span class="yu">剩余999件</span>
+	    				</div>
+	    				<div class="hezi">
+	    					<div class="buy">立即购买</div>
+	    					<div class="sc">
+	    						<div>收藏</div>
+	    						<div class="djfx">分享</div>
+	    						<div class="car">加入购物车</div>
+	    					</div>
+	    				</div>
+	    				<div style="clear:both"></div>
+	    				<ul class="uls">
+	    					<li class="lis">
+	    						<div class="zx btn">
+	    							<i class="icon-phone-sign"></i>
+	    							商家咨询
+	    							<span class="flo"><i class="icon-angle-right"></i></span>
+	    						</div>
+	    						<div class="active">电话咨询：0755-88866775</div>
+	    					</li>
+	    					<li class="lis">
+	    						<div class="pl btn">
+	    							<i class="icon-comment-alt"></i>
+	    							评论信息
+	    							<span class="flo"><i class="icon-angle-right"></i></span>
+	    						</div>
+	    						<div class="active">暂无评论!</div>
+	    					</li>
+	    					<li class="lis">
+	    						<div class="ms btn">
+	    							<i class="icon-file-alt"></i>
+	    							商品描述
+	    							<span class="flo"><i class="icon-angle-right"></i></span>
+	    						</div>
+	    						<div class="miao active">
+	    							<p>2016年中秋礼品强烈推荐!!2016年中秋礼品强烈推荐!!</p>
+	    						</div>
+	    					</li>
+	    				</ul>
+	    			</div>
+				</div>
+			</div>
+			<div class="mask"></div>
+			<div class="win">
+				<div class="window-top">
+					<dl>
+						<dt><img src="images/win1.jpg"/></dt>
+						<dd>QQ空间</dd>
+					</dl>
+					<dl>
+						<dt><img src="images/win2.jpg"/></dt>
+						<dd>新浪微博</dd>
+					</dl>
+					<dl>
+						<dt><img src="images/win3.jpg"/></dt>
+						<dd>腾讯微博</dd>
+					</dl>
+					<dl>
+						<dt><img src="images/win4.jpg"/></dt>
+						<dd>人人网</dd>
+					</dl>
+					<dl>
+						<dt><img src="images/win5.jpg"/></dt>
+						<dd>开心网</dd>
+					</dl>
+					<dl>
+						<dt><img src="images/win6.jpg"/></dt>
+						<dd>邮件</dd>
+					</dl>
+				</div>
+				<div class="window-bott">
+					<div class="close">取消</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			/*---*/
+			var url=location.href;
+			var arr=url.split("?");
+			var arr=arr[1].split("&");
+			var id=arr[0].split("=")[1];     
+			var commission=arr[1].split("=")[1];   
+			var name=decodeURI(arr[2].split("=")[1]);
+			var imagessrc=arr[3].split("=")[1];
+			var introduction=decodeURI(arr[4].split("=")[1]);
+			var oldprice=arr[5].split("=")[1];    
+			var price=arr[6].split("=")[1];     
+			var src=arr[7].split("=")[1];  
+			$(".shopname").html(name)
+			$(".name").html(name)
+			$(".s1").html(commission)
+			$(".oldpri").html(oldprice)
+			$(".s2").html(price)
+			$(".jj").html(introduction)
+			$(".car").append("<span style='display:none' data-id='"+id+"' data-name='"+name+"' data-src='"+src+"' data-price='"+price+"'></span>")
+			$(".buy").append("<span style='display:none' data-id='"+id+"' data-name='"+name+"' data-src='"+src+"' data-price='"+price+"'></span>")
+			imagessrc=imagessrc.split(",")
+			//console.log(imagessrc)
+			/*----*/
+			var str=''
+			var strimg=''
+			for(var i=0;i<imagessrc.length;i++){
+				str+='<div class="swiper-slide"><img src="'+imagessrc[i]+'"/></div>'
+				strimg+='<img src="'+imagessrc[i]+'" />'
+			}
+			$(".swiper-wrapper").append(str)
+			$(".miao").append(strimg)
+			/**/
+			var mySwiper = new Swiper ('.swiper-container', {
+			    direction: 'horizontal',
+			    loop: true,
+			    autoplay : 2000,
+			    autoplayDisableOnInteraction : false,
+			    // 如果需要分页器
+			    pagination: '.swiper-pagination'
+			 })
+			/*---*/
+			$(".lis").click(function(){
+				$(this).find(".active").toggle();
+				$(this).siblings().find(".active").hide();
+				if($(this).find(".flo").find("i").attr("class")=="icon-angle-up"){				
+					$(this).find(".flo").find("i").attr("class","icon-angle-right")
+				}else if($(this).find(".flo").find("i").attr("class")=="icon-angle-right"){
+					$(this).find(".flo").find("i").attr("class","icon-angle-up")
+				}
+			})
+			/*加减*/
+			var num=1;
+			$(".jia").click(function(){
+				num++
+				$(".geshu").html(num)
+			})
+			$(".jian").click(function(){
+				if(num==1){
+					num=1
+				}else{
+					num--
+				}
+				$(".geshu").html(num)
+			})
+			/*--购物车-*/
+			
+			$(".car").click(function(){
+				d={
+					"id":$(this).find("span").data("id"),
+					"name":$(this).find("span").data("name"),
+					"price":$(this).find("span").data("price"),
+					"src":$(this).find("span").data("src"),
+					"count":parseInt($(".geshu").html())
+				}
+				var arr=[];
+				var flag=true;
+				var	info=eval(localStorage.getItem("shop"));
+				if(localStorage.getItem("shop")){
+					arr=info;
+					for(var i=0;i<arr.length;i++){
+						console.log(arr[i].id)
+						if(arr[i].id==d.id){
+							arr[i].count+=d.count;
+							flag=false;
+						}
+					}
+				}
+				if(flag){
+					arr.push(d);
+				}
+				localStorage.setItem("shop",JSON.stringify(arr));
+			})
+			/*--分享--*/
+			$(".djfx").click(function(){
+				$(".mask,.win").show()
+				$(".close").click(function(){
+					$(".mask,.win").hide()
+				})
+			})
+			//
+			$(".buy").click(function(){
+				d={
+					"id":$(this).find("span").data("id"),
+					"name":$(this).find("span").data("name"),
+					"price":$(this).find("span").data("price"),
+					"src":$(this).find("span").data("src"),
+					"count":parseInt($(".geshu").html())
+				}
+				var arr=[];
+				var flag=true;
+				var	info=eval(localStorage.getItem("shop"));
+				if(localStorage.getItem("shop")){
+					arr=info;
+					for(var i=0;i<arr.length;i++){
+						console.log(arr[i].id)
+						if(arr[i].id==d.id){
+							arr[i].count+=d.count;
+							flag=false;
+						}
+					}
+				}
+				if(flag){
+					arr.push(d);
+				}
+				localStorage.setItem("shop",JSON.stringify(arr));
+				window.location.href="gwc.html"
+			})
+		</script>
+	</body>
+</html>

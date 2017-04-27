@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" href="css/animate.min.css" />		
+		<script src="js/rem.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script src="js/swiper.animate.min.js"></script>
+		<style>
+			*{margin:0;padding:0}
+			body,html{
+				width:100%;
+				height:100%;
+				overflow: hidden;
+				font-family: "微软雅黑";
+			}
+			.swiper-container,.swiper-wrapper,.swiper-slide{
+				width:100%;
+				height:100%;
+			}
+			#box{
+				width:100%;
+				height:100%;
+				background:url(images/fdbg.jpg);
+				background-size:100% 100%;
+				position: relative;
+			}
+			.con{
+				position: absolute;
+				top:14.1rem;
+				left:1.5rem;
+			}
+			dl{
+				width:3.825rem;
+				height:6.925rem;
+				margin-right:1rem;	
+				float:left;						
+			}
+			dl dt{
+				width:100%;				
+				height:3.825rem;
+			}
+			dl dt img{
+				display:block;
+				width:100%;
+				height:100%;
+			}
+			dl dd{
+				text-align: center;
+				color:#fff;
+				font-size:0.7rem;
+				padding-top:0.95rem;
+			}
+			#dw{
+				position: absolute;
+				right:0.5rem;
+				bottom:3.2rem;
+			}
+			#dw a{
+				display:block;
+				width:2.25rem;
+				height:2.9rem;
+				background:url(images/dw.png);
+				background-size:100% 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div id="box" class="swiper-slide">
+					<div class="con ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0.1s">
+						<dl>
+							<dt><a href="gift.html"><img src="images/index_1.png" alt="" /></a></dt>
+							<dd>茶礼品</dd>
+						</dl>
+						<dl>
+							<dt><a href="ProductList.html"><img src="images/cuxiao_index.png" alt="" /></a></dt>
+							<dd>特价促销</dd>
+						</dl>
+						<dl>
+							<dt><a href="baike.html"><img src="images/index_3.png" alt="" /></a></dt>
+							<dd>茶百科</dd>
+						</dl>
+						<dl>
+							<dt><a href="liu.html"><img src="images/index_6.png" alt="" /></a></dt>
+							<dd>六顺清</dd>
+						</dl>
+						<dl>
+							<dt><a href="gift.html"><img src="images/index_2.png" alt="" /></a></dt>
+							<dd>官网</dd>
+						</dl>
+						<dl>
+							<dt><a href="myself.html"><img src="images/index_5.png" alt="" /></a></dt>
+							<dd>个人中心</dd>
+						</dl>
+					</div>
+					<div id="dw">
+						<a href="xingongneng.html"></a>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</body>
+	<script type="text/javascript">
+	window.onload=function(){
+		 var mySwiper = new Swiper ('.swiper-container', {
+			  onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+			    swiperAnimateCache(swiper); //隐藏动画元素 
+			    swiperAnimate(swiper); //初始化完成开始动画
+			  }, 
+			  onSlideChangeEnd: function(swiper){ 
+			    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+			  } 
+			  })
+	}
+		
+	</script>
+</html>

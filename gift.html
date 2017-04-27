@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" href="css/animate.min.css" />
+		<script src="js/zepto.js"></script>
+		<script src="js/rem.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script src="js/swiper.animate.min.js"></script>
+		<style>
+			*{margin:0;padding:0}
+			body,html{
+				width:100%;
+				height:100%;
+				overflow: hidden;
+				font-family: "微软雅黑";
+			}
+			a{
+				text-decoration: none;
+			}
+			i{
+				font-style: normal;
+			}
+			@font-face{
+				font-family: "iconfont";
+				src:url("font/iconfont.eot");
+				src:url("font/iconfont.eot") format("embedded-opentype"),
+				url("font/iconfont.woff") format("woff"),
+				url("font/iconfont.ttf") format("truetype"),
+				url("font/iconfont.svg") format("svg");				
+			}
+			#box{
+				width:100%;
+				height:100%;
+				background:url(images/login_bg.jpg);
+				background-size:100% 100%;
+			}
+			.top{
+				width:100%;
+				height:2.5rem;
+				background:#144d2d;
+				overflow: hidden;
+				display: flex;
+				justify-content: space-around;
+			}
+			.top a{
+				line-height:2.5rem;
+				font-family: "iconfont";
+				color:#fff;
+			}
+			.top h2{
+				line-height:2.5rem;
+				color:#fff;
+				font-weight:300;
+				font-size:0.8rem;
+				padding:0 4.2rem;
+			}
+			.icon-zuoshuangjiantou:before{
+				content:"\e61c";
+				font-size:0.8rem;
+				
+			}
+			.icon-fangzi:before{
+				content: "\e600";
+				font-size:1.05rem;
+			}
+			.main{
+				width:100%;
+			}
+			.main .lump{
+				width:100%;				
+			}
+			.lump .lump-show{
+				width:100%;
+				height:3.1rem;
+			}
+			.lump-show .lump_left{
+				width:13.75rem;
+				margin-left:0.925rem;
+				float:left;
+			}
+			.lump_left .p01{
+				font-size:0.75rem;
+				line-height:0.75rem;
+				color:#343434;
+				padding-top:0.9rem;
+				padding-bottom: 0.6rem;
+			}
+			.lump_left .p02{
+				font-size:0.55rem;
+			}
+			.lump_left .p02 a{
+				color:#b8b8b8;
+			}
+			.lump_right{
+				float:left;
+				width:0.65rem;
+				height:0.4rem;
+				background:url(images/btm_tips.png);
+				background-size:100% 100%;
+				margin-top:1.4rem;
+			}
+			.lump .lump-hide{
+				display: none;
+				width:100%;
+				height:2.2rem;
+				background:#e1e1e1;
+				overflow: hidden;
+			}
+			.lump-hide a{				
+				float:left;
+				width:22%;
+				line-height:1.99rem;
+				font-size:0.4rem;
+				text-align:center;
+				background:#d6d6d6;
+				margin-left:1%;
+				margin-top:1%;
+				color:#393939;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div class="top">
+				<a href="index.html" class="icon-zuoshuangjiantou"></a>
+				<h2>产品分类</h2>
+				<a href="index.html" class="icon-fangzi"></a>
+			</div>
+			<div class="main">
+				<div class="lump">
+					<div class="lump-show">
+						<div class="lump_left">
+							<p class="p01">红茶</p>
+							<p class="p02">
+								<a href="javascript:;">滇红红茶</a>&nbsp;&nbsp;
+								<a href="javascript:;">金骏眉</a>
+							</p>
+						</div>
+						<div class="lump_right"></div>
+					</div>
+					<div class="lump-hide">
+						<a href="javascript:;">滇红红茶</a>&nbsp;&nbsp;
+						<a href="javascript:;">金骏眉</a>						
+					</div>
+				</div>
+				<div class="lump">
+					<div class="lump-show">
+						<div class="lump_left">
+							<p class="p01">古树普洱</p>
+							<p class="p02">
+								<a href="javascript:;">古树生普</a>&nbsp;&nbsp;
+								<a href="javascript:;">宫廷熟普</a>
+							</p>
+						</div>
+						<div class="lump_right">
+						</div>
+					</div>
+					<div class="lump-hide">
+						<a href="javascript:;">古树生普</a>&nbsp;&nbsp;
+						<a href="javascript:;">宫廷熟普</a>						
+					</div>
+				</div>
+				<div class="lump">
+					<div class="lump-show">
+						<div class="lump_left">
+							<p class="p01">茶雕工艺品</p>
+							<p class="p02">
+								<a href="javascript:;">工艺品挂件</a>&nbsp;&nbsp;
+								<a href="javascript:;">工艺品摆件</a>
+							</p>
+						</div>
+						<div class="lump_right">
+
+						</div>
+					</div>
+					<div class="lump-hide">
+						<a href="javascript:;">工艺品挂件</a>&nbsp;&nbsp;
+						<a href="javascript:;">工艺品摆件</a>						
+					</div>
+				</div>
+				<div class="lump">
+					<div class="lump-show">
+						<div class="lump_left">
+							<p class="p01">茶雕工艺定制</p>
+							<p class="p02">
+								<a href="javascript:;">工艺定制</a>
+							</p>
+						</div>
+						<div class="lump_right">
+
+						</div>
+					</div>
+					<div class="lump-hide">
+						<a href="javascript:;">工艺定制</a>						
+					</div>
+				</div>
+				<div class="lump">
+					<div class="lump-show">
+						<div class="lump_left">
+							<p class="p01">合润天香</p>
+							<p class="p02">
+								<a href="javascript:;">茶礼品</a>
+							</p>
+						</div>
+						<div class="lump_right">
+
+						</div>
+					</div>
+					<div class="lump-hide">
+						<a href="javascript:;">茶礼品</a>						
+					</div>
+				</div>
+				<div class="lump">
+					<div class="lump-show">
+						<div class="lump_left">
+							<p class="p01">今日特价</p>
+							<p class="p02">
+								<a href="javascript:;">限时促销</a>&nbsp;&nbsp;
+								<a href="javascript:;">中秋茶礼</a>
+							</p>
+						</div>
+						<div class="lump_right">
+
+						</div>
+					</div>
+					<div class="lump-hide">
+						<a href="javascript:;">限时促销</a>&nbsp;&nbsp;
+						<a href="javascript:;">中秋茶礼</a>						
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+	<script>
+		$(".lump").click(function(){
+			if($(this).children(".lump-hide").css("display")=="none"){	
+				$(this).children(".lump-hide").show();
+				$(this).children().children(".lump_right").css({"background":"url(images/top_tips.png)","background-size":"100% 100%"})
+				$(this).siblings().children(".lump-hide").hide();
+				$(this).siblings().children().children(".lump_right").css({"background":"url(images/btm_tips.png)","background-size":"100% 100%"})
+			}else{
+				$(this).children(".lump-hide").hide();
+				$(this).children().children(".lump_right").css({"background":"url(images/btm_tips.png)","background-size":"100% 100%"})
+			}
+		})
+	</script>
+</html>

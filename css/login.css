@@ -1,0 +1,132 @@
+/*公共样式*/
+@charset "utf-8";
+/* CSS Document */
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img {margin:0;padding:0;font-family: "微软雅黑"; }
+ul,ol,li{list-style:none;}
+a,u{text-decoration:none;}
+img{border:0;display:block;}
+em,i{font-style:normal;}     
+
+
+html,body{
+	width:100%;
+	height:100%
+}
+#lWraper{
+	width:100%;
+	height:100%;
+	display:flex;
+	flex-flow:column
+}	
+/*顶端部分*/		
+header{
+	width:100%;
+	height:2.25rem;
+	background:#144d2d;
+	color:white;
+	display:flex;
+	justify-content:space-around;
+	align-items:center;
+}
+header .iconfont{
+	font-size:0.9rem
+}
+header .hmiddle{
+	font-size:0.75rem;
+	font-weight:100;
+	
+}
+header .hleft{
+	font-size:1.2rem
+}
+/*中间部分*/
+.main{
+	flex:1;
+	display:flex;
+	flex-flow:column;
+	width:100%;
+}
+.main .logo{
+	width:100%;
+	height:3.2rem;
+	display:flex;
+	
+}
+.main .logo img{
+	width:6rem;
+	height:2.25rem;
+	margin-top:0.7rem
+}
+.main .main-login{
+	width:100%;
+	flex:1;
+}
+.main .main-login ul{
+	width:100%;
+	display:flex;
+	flex-flow:column;
+	justify-content:center;
+    align-items:center;
+}
+.main .main-login ul li{
+	width:100%;
+	height:4.75rem;
+	display:flex;
+	flex-flow:column;
+	justify-content: center;
+    align-items:center;
+    margin-top:0.75rem
+}
+.main .main-login ul li h4{
+	float:left;
+	margin-right:11rem;
+	margin-bottom:0.3rem;
+	font-size:0.75rem
+}
+.main .main-login ul li input{
+	width:14.5rem;
+	height:2.1rem;
+	font-size:0.75rem;
+	
+}
+
+
+
+
+
+/*底端部分*/
+footer{
+	width:100%;
+	height:10.3rem;
+	background:url(../images/chaye.jpg);
+	background-size:100% 100%;
+	display:flex;
+	
+    align-items:center;
+    flex-flow:column
+}
+footer #deng{
+	height:1.9rem;
+	width:14.25rem;
+	background:#144d2d;
+	border-radius:10px;
+	color:white;
+	line-height:100%;
+	text-align:center;
+	border:none;
+	outline:none;
+	margin-top:1.75rem;
+	margin-bottom:0.75rem;
+	font-weight:900
+}
+footer #zhuce{
+	width:5.35rem;
+	height:1.75rem;
+	background:#e3e3e3;
+	border-radius:5px;
+	color:darkgreen;
+	text-align:center;
+	line-height:1.75rem;
+	border:none;
+	outline:none
+}

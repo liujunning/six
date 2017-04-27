@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>ProductList</title>
+		<link rel="stylesheet" type="text/css" href="css/ProductList.css"/>
+		<link rel="stylesheet" type="text/css" href="Font-Awesome-3.2.1/css/font-awesome.css"/>
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/iscroll.js" type="text/javascript" charset="utf-8"></script>
+
+		<style type="text/css">
+			@font-face{
+				font-family: "iconfont";
+				src:url("font/iconfont.eot");
+				src:url("font/iconfont.eot") format("embedded-opentype"),
+				url("font/iconfont.woff") format("woff"),
+				url("font/iconfont.ttf") format("truetype"),
+				url("font/iconfont.svg") format("svg");				
+			}
+			.top{
+				width:100%;
+				height:2.15rem;
+				background:#144d2d;
+				overflow: hidden;
+				
+			}
+			.top a{
+				float:left;
+				line-height:2.15rem;
+				font-family: "iconfont";
+				color:#fff;
+			}
+			.top h2{
+				line-height:2.15rem;
+				color:#fff;
+				font-weight:300;
+				font-size:0.7rem;
+				padding:0 5.0rem;
+				float:left;
+			}
+			.icon-zuoshuangjiantou:before{
+				content:"\e61c";
+				font-size:0.8rem;
+				margin-left:0.5rem;
+			}
+			.icon-fangzi:before{
+				content: "\e600";
+				font-size:1.0rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div class="top">
+				<a href="javascript:;" onclick="window.history.back(-1)" class="icon-zuoshuangjiantou"></a>
+				<h2>产品列表</h2>
+				<a href="index.html" class="icon-fangzi"></a>
+			</div>
+			<!--滚动条-->
+			 <div class="wrap">
+				<div class="main">
+					<ul class="classify">
+						<li class="bj">人气 <i class="icon-angle-down"></i></li>
+						<li class="bj">销量 <i class="icon-angle-down"></i></li>
+						<li>价格 <i class="icon-angle-down"></i></li>
+						<li class="btn"><i class="icon-search"></i>搜索</li>
+					</ul>
+					<div class="sear"> 
+						<input type="text" name="search" id="search" value="" placeholder="请输入搜索内容" />
+					</div>
+					<ul class="list">
+						<!--<li>
+							<img src="images/1-1.jpg"/>
+							<h2>【禅芸沁溪】月饼茶</h2>
+							<h3>原价:<span class="s1">￥1199.00</span></h3>
+							<h4>现价:<span class="s2">￥1055.00</span></h4>
+						</li>-->
+					</ul>
+				</div>
+			</div>	
+		</div>
+		<script type="text/javascript">
+			
+		</script>
+	</body>
+</html>
+<script src="js/ProductList.js" type="text/javascript" charset="utf-8"></script>

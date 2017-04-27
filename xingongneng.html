@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script type="text/javascript" src="js/rem.js"></script>
+		<title>新功能</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			html,body{
+				width:100%;
+				height:100%;
+				overflow: hidden;
+				font-family: "微软雅黑";
+			}
+			ul li{
+				list-style: none;
+			}
+			#box{
+				width:100%;
+				height:100%;
+				overflow: hidden;
+				display: flex;
+				flex-flow: column;
+			}
+			header{
+				width:100%;
+				height:2.5rem;
+				border-bottom: 1px solid #ff0000;
+				text-align: center;
+				line-height: 2.5rem;
+				color:#7a7a7a;
+				font-size:0.8rem;
+				font-weight: 600;
+				position: relative;
+			}
+			header .header-p{
+				width: 2.05rem;
+				height:1.2rem;
+				border: 1px solid #b1b1b1;
+				text-align: center;
+				line-height: 1.2rem;
+				color: #b1b1b1;
+				font-size: 0.65rem;
+				font-size: 400;
+				position: absolute;
+			}
+			.header-left{
+				top:0.65rem;
+				left:0.65rem;
+			}
+			.header-right{
+				top:0.65rem;
+				right:0.65rem;
+			}
+			#main{
+				flex: 1;
+
+			}
+			#main li{
+				float:left;
+				width: 50%;
+				height: 7.5rem;
+				text-align: center;
+				padding-top: 2rem;
+				overflow: hidden;
+			}			
+			#main li p{
+				color:#273343;
+				font-size: 1rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<header>
+				<p class="header-p header-left" onclick="window.history.back(-1)">返回</p>
+				新功能
+				<p class="header-p header-right" onclick="window.location.href='index.html'">首页</p>
+			</header>
+			<ul id="main">
+				<li onclick="window.location.href='tuangou.html' ">
+					<img src="images/tg.png" style="width:100px" alt="" title=""/>
+					<p>团购</p>
+				</li>
+				<li onclick="window.location.href='tuangou.html' ">
+					<img src="images/qg.png" style="width:100px" alt="" title=""/>
+					<p>抢购</p>
+				</li>
+				<li>
+					<img src="images/yx.png" style="width:100px" alt="" title=""/>
+					<p>游戏</p>
+				</li>
+				
+			</ul>
+		</div>
+	</body>
+</html>

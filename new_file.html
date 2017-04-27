@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="example">
+			<my-component></my-component>
+		</div>
+	</body>
+</html>
+<script>
+	Vue.component("my-component",{
+		template:"<div>I will see you</div>"
+	})
+	new Vue({
+		el:"#example"
+	})
+	
+	
+	
+	var Child={
+		template:"<div>See you again</div>"
+	}
+	new Vue({
+		components:{
+			"my-component":Child
+		}
+	})
+</script>

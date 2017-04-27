@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script type="text/javascript" src="js/rem.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/xiangqing.js"></script>
+		<script type="text/javascript" src="js/swiper.min.js"></script>
+		<script type="text/javascript" src="js/daojishi.js"></script>
+		<link rel="stylesheet" href="css/xiangqing.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<title>活动详情</title>
+		<style type="text/css">
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<header>
+				<p class="header-p header-left" onclick="window.history.back(-1)">返回</p>
+				活动详情
+				<p class="header-p header-right"  onclick="window.location.href='index.html'">首页</p>
+			</header>
+			<div class="main">
+				<div class="box" style="width:100%;height:200%">
+				<div class="list">
+					<ol id="nav">
+						<li>基本信息</li>
+						<li>图文详情</li>
+						<li>联系商家</li>
+						<li id="fd"></li>
+					</ol>
+					<div class="xqbox">
+						<ul class="xingq">
+							<li class="page page1">
+								<div class="swiper-container">
+								    <div class="swiper-wrapper">
+								        <div class="swiper-slide"><img class="slide1" src="images/1-2.jpg"></div>
+								        <div class="swiper-slide"><img class="slide2" src="images/1-3.jpg"></div>
+								        <div class="swiper-slide"><img class="slide3" src="images/1-1.jpg"></div>
+								    </div>
+								    <!-- 如果需要分页器 -->
+								    <div class="swiper-pagination"></div>
+								</div>
+								<p class="active">活动名称：中秋月饼茶预订</p>
+								<div id="tuan">
+									<span class="nprise">￥545.00</span>
+									<span class="jia">团购价</span>
+									<span class="person">10人起</span>
+									<img class="tgimg" src="images/tuangou.png"/>
+								</div>
+								<div class="old">
+									<span class="oprise">￥659.00</span>
+									<span class="zhek">8.3折</span>
+									<p class="tug">已参团<span class="num">0</span>件</p>
+								</div>
+								<p class="hd">团购说明：接受企业中秋送客户的月饼茶预订业务从现在开始，7月份下订单10盒以上7.8折起！8月份预订50盒以上8.8折起！欢迎亲们越早越优惠！</p>
+								<div class="time">
+									<span class="zt">剩余时间：</span>
+									<span class="timec time_d">3</span>天
+									<span class="timec time_h">24</span>时
+									<span class="timec time_m">12</span>分
+									<span class="timec time_s">59</span>秒
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				</div>
+			</div>
+			<footer>
+				<input id="jian" type="button" value="-"/>
+				<input id="shopnum" type="text" value="1"/>
+				<input id="jia" type="button" value="+"/>
+				<input id="shopcar" type="button" value="团购结束"/>				
+			</footer>
+		</div>
+	</body>
+</html>

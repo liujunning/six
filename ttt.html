@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<ul class="pagination">
+				<li v-for="n in pageCount">
+					<a href="javascripit:void(0)" v-bind:class="activeNumber === n + 1 ? 'active' : ''">{{ n + 1 }}</a>
+				</li>
+			</ul>
+		</div>
+		
+		
+		
+		<div id="example2">
+			<simple-counter></simple-counter>
+			<simple-counter></simple-counter>
+			<simple-counter></simple-counter>
+		</div>
+	</body>
+	<script src="js/vue.js"></script>
+	<script>
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				activeNumber: 1,
+				pageCount: 10
+			}
+		})
+		
+		
+		var data={ counter:0}
+		Vue.component("simple-counter",{
+			template:'<button v-on:click="counter +=1">{{counter}}</button>',
+			data:function(){
+				return {
+					counter:0
+				}
+			}
+		})
+		new Vue({
+			el:"#example2"
+		})
+	</script>
+</html>
